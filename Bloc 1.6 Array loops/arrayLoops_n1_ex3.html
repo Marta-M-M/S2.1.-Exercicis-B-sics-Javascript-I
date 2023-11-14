@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array loops, Nivell 1, Exercici 3</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*filter: Teniu una array de números. 
+        Utilitza filter per a crear una nova array que només contingui 
+        els números parells. let numeros = [1, 2, 3, 4, 5, 6];*/
+
+        let numeros = [1, 2, 3, 4, 5, 6];
+
+        let numerosParells = numeros.filter(function (element) {
+            return (element % 2 === 0);
+
+        });
+
+        console.log(numerosParells);
+    </script>
+
+</body>
+
+</html>

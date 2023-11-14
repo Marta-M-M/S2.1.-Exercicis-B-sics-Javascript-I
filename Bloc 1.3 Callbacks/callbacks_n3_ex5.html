@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Callbacks Nivell 3, Exercici 5</title>
+</head>
+
+<body>
+
+  <p id="cadena"></p>
+
+  <script>
+    // Escriu una funció processarCadena que accepti dos paràmetres: 
+    //una cadena de caràcters i una funció de callback. La funció processarCadena ha de convertir la cadena a majúscules i llavors invocar la funció de callback amb la cadena transformada.
+
+    function processarCadena(caracteres, callback) {
+      caracteres = caracteres.toLowerCase()
+      console.log(`${caracteres}`);
+    }
+
+    function callback() {
+      let cadena = prompt("Escribe una frase, por favor");
+      processarCadena(cadena);
+    }
+
+    callback();
+
+
+  </script>
+</body>
+
+</html>

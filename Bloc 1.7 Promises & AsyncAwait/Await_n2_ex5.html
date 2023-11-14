@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await, Nivell 2, Exercici 5</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*Gestió d'errors amb async/await: Modifica la funció de l'exercici 4 per a 
+        que capturi qualsevol possible error utilitzant un bloc try/catch.*/
+
+        let input = "Hola";
+
+        let promise = new Promise(function (aceptar, rechazar) {
+            setTimeout(() => {
+                if (Math.random() < 0.5) {
+                    rechazar(Error("Bye World!"));
+                } else {
+                    aceptar("Hello World!");
+                }
+            }, 2000);
+        });
+
+        async function fAsincronica() {
+            console.log("esto es la función asincronica");
+            try {
+                let resultado = await promise();
+
+                console.log(resultado);
+
+            } catch (error) {
+                console.error("Error:", error.message);
+
+            }
+        }
+
+        promise.then((mensaje) => {
+            console.log("Success:", mensaje);
+        }).catch((error) => {
+            console.error("Error:", error.message);
+        });
+
+    </script>
+
+
+</body>
+
+</html>

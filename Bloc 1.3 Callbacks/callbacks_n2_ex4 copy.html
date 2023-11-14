@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Callbacks Nivell 2, Exercici 4</title>
+</head>
+
+<body>
+  <script>
+    // Callbacks amb arrays: 
+    //Escriu una funció processarElements que accepti dos paràmetres: un array i una funció de callback. La funció processarElements ha d'invocar la funció de callback per cada element de l'array.
+
+    let lista = ["patata", "huevo", "aceite"];
+
+    function processarElements(lista, callback) {
+      lista.forEach(function (element, indice, array) {
+        callback(element, indice, array);
+      });
+    }
+
+    function callback(element, indice) {
+      console.log(`Element: ${element}, Indice: ${indice}`);
+    }
+
+    processarElements(lista, callback);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await, Nivell 1, Exercici 2</title>
+</head>
+<body>
+    
+    <script>
+
+        /*Creació d'una Promesa: Crea una promesa que es resolgui després 
+        de 2 segons i que retorni la cadena de text 'Hola, món'.*/
+
+        let promise = new Promise (function (aceptar, rechazar){
+            setTimeout(() => {
+                if(true){
+                    aceptar("Hello World!");
+                } else {
+                    rechazar(Error("Bye World!"));
+                }
+            }, 2000);
+        });
+
+        promise.then((mensaje) => {
+            console.log("Success:", mensaje);
+        }).catch((error) => {
+            console.error("Error:", error.message);
+        });
+
+    </script>
+
+
+</body>
+</html>

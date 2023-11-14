@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operador ternari Nivell 3, Exercici 4</title>
+  </head>
+  <body>
+    <script>
+      /*Operador ternari dins un bucle: Escriu una funció parOImpar que accepti un array de números i utilitzi un bucle per a recórrer l'array. Dins del bucle, utilitza l'operador ternari per a determinar si cada número és parell o imparell.*/
+
+      let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let par = [];
+      let impar = [];
+
+      function parOImpar() {
+        for (let i = 0; i < numeros.length; i++) {
+          let tipoNumero =
+            i % 2 == 0 ? impar.push(numeros[i]) : par.push(numeros[i]);
+        }
+      }
+
+      parOImpar();
+
+      console.log(`Els números pars son: ${par}`);
+      console.log(`Els números impars son: ${impar}`);
+    </script>
+  </body>
+</html>

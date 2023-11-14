@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset and Spread Operators, Nivell 2, Exercici 3</title>
+</head>
+
+<body>
+
+    <script>
+        //Copiant objectes amb Spread: Crea un objecte 'objecte1'. 
+        //Després crea un segon objecte, 'objecte2', que sigui una còpia de 'objecte1' utilitzant l'operador spread. Canvia una propietat de 'objecte2' i comprova que 'objecte1' no ha canviat.
+
+        let objecte1 = {
+            nombre: "Mario",
+            edad: "42",
+            ciudad: "Barcelona"
+        }
+
+        let objecte2 = {
+            ...objecte1,
+            ciudad: "Madrid",
+            ocupación: "Desarrollador web"
+        }
+
+        console.log(objecte1);
+        console.log(objecte2);
+
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

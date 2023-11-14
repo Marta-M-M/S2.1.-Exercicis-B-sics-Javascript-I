@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Callbacks Nivell 2, Exercici 3</title>
+</head>
+
+<body>
+  <script>
+    // Ús de callbacks en funcions asíncrones: 
+    //Escriu una funció esperarISaludar que accepti dos paràmetres: un nom i una funció de callback. 
+    //La funció ha d'esperar 2 segons i llavors invocar la funció de callback, passant el nom com a paràmetre
+
+
+    function esperarISaludar(nom, callback) {
+      callback(nom);
+    }
+
+    function saluda(nom) {
+      console.log(`Hola, ${nom}. Encantado`);
+    }
+
+    setTimeout(function () {
+      esperarISaludar("María", saluda);
+    }, 2000);
+
+  </script>
+</body>
+
+</html>

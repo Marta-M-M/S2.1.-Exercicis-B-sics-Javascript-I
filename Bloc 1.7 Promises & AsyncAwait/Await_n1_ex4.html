@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await, Nivell 1, Exercici 4</title>
+</head>
+<body>
+    
+    <script>
+
+        /*Ús de async/await: Escriu una funció asíncrona que utilitzi la funció 
+        await per a esperar el resultat de la promesa creada a l'exercici 1, i 
+        que després imprimeixi aquest resultat a la consola.*/
+
+        let input = "Hola";
+
+        let promise = new Promise (function (aceptar, rechazar){
+            setTimeout(() => {
+                if(true){
+                    aceptar("Hello World!");
+                } else {
+                    rechazar(Error("Bye World!"));
+                }
+            }, 2000);
+        });
+
+        async function fAsincronica (){
+            console.log("esto es la función asincronica");
+        
+        let resultado = await promise();
+
+        console.log(resultado);
+
+        }
+        promise.then((mensaje) => {
+            console.log("Success:", mensaje);
+        }).catch((error) => {
+            console.error("Error:", error.message);
+        });
+
+    </script>
+
+
+</body>
+</html>

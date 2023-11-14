@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset and Spread Operators, Nivell 1, Exercici 2</title>
+</head>
+
+<body>
+
+    <script>
+        //Operador Rest en Funcions: Crea una funció 'suma' que utilitzi l'operador rest
+        // per a acceptar un nombre indeterminat d'arguments i retornar la seva suma.
+
+        function suma (...numeros){
+            let resultado = 0;
+            for (let numero of numeros){
+                resultado += numero;
+            }
+            return resultado;
+        }
+
+        console.log(suma(4, 4, 2, 6));
+
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

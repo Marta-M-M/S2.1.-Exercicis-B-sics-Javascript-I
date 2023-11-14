@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset and Spread Operators, Nivell 3, Exercici 6</title>
+</head>
+
+<body>
+
+    <script>
+        //Fusionant Objectes amb Spread: Crea dos objectes amb propietats diferents. 
+        //Utilitza l'operador spread per a fusionar aquests dos objectes en un de nou.
+
+        let coche = {
+            marca: "BMW",
+            modelo: "sport x21",
+            año: "2022"
+        }
+
+        let avión = {
+            marca: "Boeing",
+            modelo: "777",
+            año: "2005"
+        }
+
+        let mediosTransporte = {
+            coche: { ...coche}, 
+            avión: {...avión}
+        };
+
+        console.log(mediosTransporte);
+
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

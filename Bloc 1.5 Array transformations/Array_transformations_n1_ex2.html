@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array transformations, Nivell 1, Exercici 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Filter: Teniu una array de números [1, 2, 3, 4]. 
+        //Crea una nova array que només contingui els números parells.
+
+        let numeros = [1, 2, 3, 4];
+
+        let numParells = numeros.filter(function (element) {
+            return (element % 2 === 0)
+        });
+
+        console.log(numParells);
+
+    </script>
+
+</body>
+
+</html>

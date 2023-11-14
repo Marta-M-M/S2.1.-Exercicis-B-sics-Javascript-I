@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array transformations, Nivell 3, Exercici 6</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*Every / Some: Usa every i some per a determinar si tots o alguns dels 
+        elements de l'array [11, 12, 13, 14] són majors que 10, respectivament*/
+
+        let numeros = [11, 12, 13, 14];
+
+        function numMayor10() {
+            let todosMayor10 = numeros.every(function (element) {
+                return (element > 10);
+            });
+
+            let algunoMayor10 = numeros.some(function (element) {
+                return (element > 2);
+            });
+
+            console.log(todosMayor10);
+            console.log(algunoMayor10);
+        }
+
+        numMayor10();
+        
+    </script>
+
+</body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await, Nivell 2, Exercici 5</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*Promise.all: Crea dues promeses que es resolguin després de 2 i 3 segons, respectivament. 
+        Utilitza Promise.all per a esperar que ambdues promeses es resolguin, i 
+        imprimeix els resultats a la consola.*/
+
+
+        let promise1 = new Promise(function (aceptar, rechazar) {
+            setTimeout(() => {
+                if (true) {
+                    aceptar("Hello World!");
+                } else {
+                    rechazar(Error("Bye World!"));
+                }
+            }, 2000);
+        });
+
+        let promise2 = new Promise(function (aceptar, rechazar) {
+            setTimeout(() => {
+                if (true) {
+                    aceptar("Hello World!");
+                } else {
+                    rechazar(Error("Bye World!"));
+                }
+            }, 3000);
+        });
+
+        Promise.all([promise1, promise2])
+            .then(mensaje => {
+                console.log("Success:", mensaje);
+            })
+            .catch((error) => {
+                console.error("Error:", error.message);
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

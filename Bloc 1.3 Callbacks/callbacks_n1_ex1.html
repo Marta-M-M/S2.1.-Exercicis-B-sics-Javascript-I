@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks Nivell 1, Exercici 1</title>
+  </head>
+  <body>
+    <script>
+      //Callback bàsic: Escriu una funció anomenada processar que accepti dos paràmetres: un nombre i una funció de callback. La funció processar ha d'invocar la funció de callback, 
+      //passant el nombre com a paràmetre.
+
+
+      let nombre = "Emma";
+
+      function processar (nombre, callback){
+        callback(nombre);
+      }
+
+      function callback(nombre){
+        console.log("funcion callback", nombre);
+        
+      }
+
+     processar(nombre, callback);
+
+    </script>
+  </body>
+</html>

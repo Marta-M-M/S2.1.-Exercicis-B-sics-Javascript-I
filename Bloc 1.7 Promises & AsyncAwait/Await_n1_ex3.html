@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises & Async/Await, Nivell 1, Exercici 3</title>
+</head>
+<body>
+    
+    <script>
+
+        /*Promesa amb reject: Crea una promesa que es resolgui després de 2 segons si
+         l'input és igual a 'Hola', i que la rebutgi si l'input és 
+         qualsevol altra cosa.*/
+
+        let input = "Hola";
+
+        let promise = new Promise (function (aceptar, rechazar){
+            setTimeout(() => {
+                if(input === "Hola"){
+                    aceptar("Funciona");
+                } else {
+                    rechazar(Error("Promesa rechazada"));
+                }
+            }, 2000);
+        });
+
+        promise.then((mensaje) => {
+            console.log("Success:", mensaje);
+        }).catch((error) => {
+            console.error("Error:", error.message);
+        });
+
+    </script>
+
+
+</body>
+</html>

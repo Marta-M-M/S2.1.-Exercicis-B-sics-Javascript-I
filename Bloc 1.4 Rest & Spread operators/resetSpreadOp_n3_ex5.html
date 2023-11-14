@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset and Spread Operators, Nivell 3, Exercici 5</title>
+</head>
+
+<body>
+
+    <script>
+        //Spread en Funcions: Crea una funció que accepti tres arguments. 
+        // Després, crea una array amb tres elements i crida la funció utilitzant l'operador spread amb aquesta array.
+
+
+        function compra (ingrediente1, ingrediente2, ingrediente3){
+            ingrediente1 = "huevos"
+            ingrediente2 = "mantequilla"
+            ingrediente3 = "limón"
+            return [ingrediente1, ingrediente2, ingrediente3];
+        }
+
+        let restoIngredientes = ["aceite", "sal", "leche"];
+       
+        let resultadoCompra = compra(...restoIngredientes, "azúcar");
+
+        console.log(compra(...restoIngredientes));
+        console.log(resultadoCompra);
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>
